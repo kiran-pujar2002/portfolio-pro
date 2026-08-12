@@ -25,11 +25,11 @@ export default function About() {
           </div>
           <div className="space-y-4">
             <p className="text-lg text-gray-700">
-              I'm <span className="font-semibold">Kiran H P</span>, a Full Stack Developer with 2.5+ years of experience 
+              I&apos;m <span className="font-semibold">Kiran H P</span>, a Full Stack Developer with 2.5+ years of experience 
               designing, developing, and maintaining scalable, secure web applications.
             </p>
             <p className="text-gray-600">
-              I'm proficient in HTML, CSS, JavaScript, React.js, and Angular with strong backend skills in Node.js, Python, and Java. 
+              I&apos;m proficient in HTML, CSS, JavaScript, React.js, and Angular with strong backend skills in Node.js, Python, and Java. 
               I have experience with MySQL, PostgreSQL, and MongoDB databases.
             </p>
             <p className="text-gray-600">

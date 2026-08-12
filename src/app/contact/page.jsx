@@ -27,7 +27,7 @@ export default function Contact() {
         <div>
           <p className="text-gray-600 mb-8">
             Have a question or want to work together? Feel free to reach out. 
-            I'm always open to discussing new projects, creative ideas, or opportunities.
+            I&apos;m always open to discussing new projects, creative ideas, or opportunities.
           </p>
           
           <div className="space-y-6">
