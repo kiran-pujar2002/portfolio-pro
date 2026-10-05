@@ -3,16 +3,18 @@ import Link from "next/link";
 export default function ProjectsPreview() {
   const projects = [
     {
-      title: "Dev Tinder",
-      description: "Social networking with JWT auth, RBAC, real-time chat (Socket.io), Google Gemini AI, Razorpay subscriptions.",
-      tech: ["React", "Node.js", "MongoDB", "Docker"],
-      slug: "dev-tinder"
+      title: "Maruti Suzuki India Ltd. – Equity Research & DCF Valuation",
+      description:
+        "Built a financial model covering revenue, cost, and financial statement projections. Performed DCF valuation using FCFF, WACC, terminal value, and sensitivity analysis; assessed key ratios and business drivers.",
+      tech: ["DCF Valuation", "FCFF", "WACC", "Sensitivity Analysis"],
+      slug: "maruti-suzuki-equity-research"
     },
     {
-      title: "Financial Restatement Tool",
-      description: "AI-powered QoE report generator · automates financial normalization, transaction categorization, PDF generation.",
-      tech: ["Next.js", "Express", "PostgreSQL", "Zustand"],
-      slug: "financial-restatement"
+      title: "Zepto – Financial Modelling & Quick-Commerce Industry Research",
+      description:
+        "Developed a financial model covering revenue, cost, and profitability projections. Researched the Indian quick-commerce industry, mapping market growth, competitive landscape, and key operating drivers.",
+      tech: ["Financial Modelling", "Industry Research", "Forecasting", "Excel"],
+      slug: "zepto-financial-modelling"
     }
   ];
 
@@ -25,7 +27,7 @@ export default function ProjectsPreview() {
             View all →
           </Link>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, idx) => (
             <div key={idx} className="bg-white rounded-2xl shadow-sm border border-gray-200/80 overflow-hidden card-hover">

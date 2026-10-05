@@ -1,33 +1,31 @@
 export default function Experience() {
   const experiences = [
     {
-      title: "Full Stack Developer",
-      company: "Wedding Cluster",
-      location: "Bangalore, India",
-      period: "Mar 2024 – Present",
+      title: "Unit Manager – Investment Advisory & Fund Analysis",
+      company: "HDFC Asset Management Company Ltd.",
+      location: "Bengaluru, India",
+      period: "Dec 2022 – Present",
       achievements: [
-        "Designed, developed, and maintained full-stack applications using React.js, Angular, Node.js, and Python",
-        "Built and maintained RESTful APIs with JWT authentication, RBAC authorization, and input validation",
-        "Migrated production app to Next.js with SSR/SSG — improving Core Web Vitals, TTFB, and SEO performance",
-        "Designed and optimized MySQL and PostgreSQL schemas; improved query performance for high-traffic endpoints",
-        "Built backend services using Python and FastAPI for REST APIs and data pipeline processing",
-        "Enforced code quality via ESLint, peer code reviews, and maintained CI/CD pipelines on AWS, Vercel, and Netlify",
-        "Wrote Jest, Enzyme unit tests and Cypress E2E tests; troubleshot and resolved critical production issues"
+        "Conducted quantitative and fundamental analysis of 20+ mutual fund schemes with ₹10,000 Cr+ AUM, improving risk-adjusted performance assessment",
+        "Performed peer benchmarking, portfolio analysis, and risk-return evaluation to identify performance drivers and investment opportunities",
+        "Analyzed industry, sector, and macroeconomic trends to assess their impact on investment performance",
+        "Prepared research notes, investment presentations, and Excel-based dashboards to support portfolio reviews and investment decisions",
+        "Monitored fund performance trends and portfolio risk metrics, delivering actionable insights to support investment decisions and periodic performance reviews"
       ]
     }
   ];
 
   const achievements = [
-    { title: "Improved Core Web Vitals", description: "Next.js SSR/SSG migration delivered faster TTFB and better search indexing" },
-    { title: "15% reduction in API calls", description: "Via debouncing and in-memory caching, improving app performance under load" },
-    { title: "30% faster feature delivery", description: "By building a reusable Tailwind + MUI component library" },
-    { title: "Secure full-stack application", description: "Dev Tinder with JWT auth, RBAC, real-time chat, and payment integration" }
+    { title: "Portfolio Analysis at Scale", description: "Analyzed 20+ mutual fund schemes with ₹10,000 Cr+ AUM, strengthening risk-adjusted performance assessment" },
+    { title: "Risk-Return Evaluation", description: "Performed peer benchmarking and portfolio analysis to identify performance drivers and investment opportunities" },
+    { title: "Macro & Sector Research", description: "Assessed industry, sector, and macroeconomic trends and their impact on investment performance" },
+    { title: "Investment Reporting", description: "Built research notes, investment presentations, and Excel-based dashboards for portfolio reviews and decisions" }
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">Professional Experience</h1>
-      
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-14">
+      {/* <h1 className="text-4xl font-bold text-gray-800 mb-8">Professional Experience</h1> */}
+
       <div className="space-y-8">
         {experiences.map((exp, idx) => (
           <div key={idx} className="bg-white rounded-2xl shadow-sm border border-gray-200/80 p-8">

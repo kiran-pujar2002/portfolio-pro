@@ -2,22 +2,22 @@ import Link from "next/link";
 
 export default function SkillsOverview() {
   const skills = [
-    { category: "Frontend", items: ["React, Angular, Vue", "Next.js, TypeScript"] },
-    { category: "Backend", items: ["Node.js, Python", "Java, FastAPI"] },
-    { category: "Databases", items: ["MySQL, PostgreSQL", "MongoDB, Firebase"] },
-    { category: "DevOps", items: ["AWS, Docker", "CI/CD, Vercel"] }
+    { category: "Financial Analysis", items: ["Financial Statement & Ratio Analysis", "Earnings & Industry Research", "Portfolio & Investment Analysis"] },
+    { category: "Valuation & Modelling", items: ["DCF & Relative Valuation", "CAPM, Beta, WACC", "FCFF/FCFE, NOPAT"] },
+    { category: "Portfolio Metrics", items: ["P/E, Sharpe Ratio", "Information Ratio, Alpha", "Risk-Adjusted Returns"] },
+    { category: "Tools", items: ["Advanced Excel", "Bloomberg (basic)", "Screener, MS Office"] }
   ];
 
   return (
     <section className="bg-white py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="section-title text-3xl font-bold text-gray-800">Tech Stack</h2>
+          <h2 className="section-title text-3xl font-bold text-gray-800">Core Expertise</h2>
           <Link href="/skills" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
             View all →
           </Link>
         </div>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {skills.map((skill, idx) => (
             <div key={idx} className="bg-gray-50 rounded-xl p-4 border border-gray-200/70">

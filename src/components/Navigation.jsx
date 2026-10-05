@@ -21,10 +21,17 @@ export default function Navigation() {
     <nav className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-200/60">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-xl font-bold tracking-tight text-gray-800">
-            Kiran<span className="text-blue-600">.</span>dev
+          <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-tight text-gray-800">
+            {/* Logo icon */}
+            <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-blue-600 text-white">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </span>
+            {/* Wordmark */}
+            Sangamesh<span className="text-blue-600">.</span>
           </Link>
-          
+
           {/* Desktop nav */}
           <div className="hidden md:flex space-x-8 text-sm font-medium">
             {navItems.map((item) => (
@@ -41,7 +48,7 @@ export default function Navigation() {
               </Link>
             ))}
           </div>
-          
+
           {/* Mobile hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -59,7 +66,7 @@ export default function Navigation() {
             )}
           </button>
         </div>
-        
+
         {/* Mobile menu */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">

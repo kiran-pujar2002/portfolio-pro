@@ -1,47 +1,80 @@
 export default function Skills() {
   const skillCategories = [
     {
-      name: "Frontend",
-      skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js (Hooks, Context)", "Angular", "Vue.js", "TypeScript", "Next.js (SSR/SSG)"]
+      name: "Financial Analysis",
+      skills: [
+        "Financial Statement Analysis",
+        "Ratio Analysis",
+        "Earnings Analysis",
+        "Industry & Company Research",
+        "Portfolio Analysis",
+        "Investment Analysis",
+        "Scenario Analysis"
+      ]
     },
     {
-      name: "UI & Styling",
-      skills: ["Tailwind CSS", "Material UI", "Responsive Design", "Figma", "CSS Modules", "Styled Components"]
+      name: "Valuation & Modelling",
+      skills: [
+        "DCF Valuation",
+        "Relative Valuation",
+        "Financial Modelling",
+        "CAPM",
+        "Beta Estimation",
+        "WACC",
+        "NOPAT",
+        "FCFF / FCFE"
+      ]
     },
     {
-      name: "State & APIs",
-      skills: ["Redux", "Redux Toolkit", "Redux Saga", "Zustand", "REST APIs", "GraphQL (Apollo)", "WebSockets", "Axios", "Context API"]
+      name: "Portfolio Metrics",
+      skills: [
+        "P/E Analysis",
+        "Sharpe Ratio",
+        "Information Ratio",
+        "Alpha",
+        "Risk-Adjusted Returns",
+        "Benchmarking"
+      ]
     },
     {
-      name: "Backend",
-      skills: ["Node.js", "Express.js", "Python", "FastAPI", "Java", "JWT Auth", "RBAC", "REST API Design"]
+      name: "Tools & Platforms",
+      skills: [
+        "Advanced Excel",
+        "Bloomberg (basic)",
+        "Screener",
+        "Microsoft Office"
+      ]
     },
     {
-      name: "Databases",
-      skills: ["MySQL", "PostgreSQL (Neon)", "MongoDB", "Firebase Firestore", "Schema Design", "Query Optimization"]
+      name: "Certifications",
+      skills: [
+        "CFA Level I Passed (2026)",
+        "NISM XV – Research Analyst",
+        "NISM X-A & X-B – Investment Adviser",
+        "NISM AIF Category I & II Distributor",
+        "NISM Equity Derivatives",
+        "Moody's Analytics – Intl. Wealth Management",
+        "Financial Modelling and Analysis"
+      ]
     },
     {
-      name: "DevOps & Cloud",
-      skills: ["AWS (EC2, S3)", "Docker", "Git", "GitHub", "CI/CD Pipelines", "Vercel", "Render", "Netlify"]
-    },
-    {
-      name: "Security",
-      skills: ["JWT Authentication", "RBAC", "Input Validation", "Secure API Design", "CORS", "HTTPS"]
-    },
-    {
-      name: "Testing",
-      skills: ["Jest", "Cypress (E2E)", "React Testing Library", "Enzyme", "ESLint", "Prettier", "Unit Testing"]
-    },
-    {
-      name: "Concepts",
-      skills: ["Agile/Scrum", "Clean Code", "Scalable Architecture", "Microservices", "DevSecOps", "Code Reviews"]
+      name: "Research & Reporting",
+      skills: [
+        "Equity Research",
+        "Investment Research",
+        "Mutual Fund Analysis",
+        "Peer Benchmarking",
+        "Macro & Sector Analysis",
+        "Research Notes & Presentations",
+        "Excel-based Dashboards"
+      ]
     }
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">Technical Skills</h1>
-      
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-14">
+      {/* <h1 className="text-4xl font-bold text-gray-800 mb-8">Core Expertise</h1> */}
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skillCategories.map((category, idx) => (
           <div key={idx} className="bg-white rounded-2xl shadow-sm border border-gray-200/80 p-6 hover:shadow-md transition">
