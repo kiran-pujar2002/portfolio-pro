@@ -1,67 +1,81 @@
+// src/components/ExperienceSummary.jsx
+import Link from "next/link";
+
+const roles = [
+  {
+    role: "Unit Manager — Investment Advisory & Fund Analysis",
+    company: "HDFC Asset Management Company Ltd.",
+    location: "Bengaluru, India",
+    period: "Dec 2022 — Present",
+    bullets: [
+      "Quantitative and fundamental analysis of 20+ mutual fund schemes with ₹10,000 Cr+ AUM",
+      "Peer benchmarking, portfolio analysis, and risk-return evaluation",
+      "Industry, sector, and macroeconomic trend research",
+    ],
+  },
+];
+
 export default function ExperienceSummary() {
   return (
-    <section className="bg-white py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-title text-3xl font-bold text-gray-800 mb-2">Professional Experience</h2>
-        <p className="text-gray-500 mb-10 ml-4">Unit Manager – Investment Advisory &amp; Fund Analysis · HDFC Asset Management Company Ltd. · Dec 2022 – Present</p>
+    <section className="relative">
+      <div className="container-page">
+        {/* Section header */}
+        <div className="mb-12">
+          <p className="eyebrow">Experience</p>
+          <h2 className="mt-5 section-title max-w-3xl">
+            Building conviction through{" "}
+            <span className="text-gold-500">analysis</span>.
+          </h2>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200/70 card-hover">
-            <div className="flex items-start gap-4">
-              <div className="bg-blue-100 p-3 rounded-xl">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
+        {/* Role card */}
+        <div className="border-t border-cream-500/15 pt-10">
+          {roles.map((r, i) => (
+            <div key={i}>
+              {/* Top meta row */}
+              <div className="flex flex-wrap items-baseline justify-between gap-3 mb-6">
+                <p className="meta text-gold-500">{r.period}</p>
+                <p className="meta">{r.location}</p>
               </div>
-              <div>
-                <h3 className="font-semibold text-lg">Fund &amp; Portfolio Analysis</h3>
-                <p className="text-gray-600 text-sm mt-1">Quantitative &amp; fundamental analysis of 20+ mutual fund schemes with ₹10,000 Cr+ AUM.</p>
-              </div>
-            </div>
-          </div>
 
-          <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200/70 card-hover">
-            <div className="flex items-start gap-4">
-              <div className="bg-indigo-100 p-3 rounded-xl">
-                <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg">Valuation &amp; Modelling</h3>
-                <p className="text-gray-600 text-sm mt-1">DCF &amp; relative valuation, CAPM, Beta, WACC, NOPAT, FCFF/FCFE, financial modelling.</p>
-              </div>
-            </div>
-          </div>
+              {/* Role + company */}
+              <h3 className="font-serif text-2xl md:text-3xl text-cream-200 leading-tight">
+                {r.role}
+              </h3>
+              <p className="mt-2 text-cream-500">{r.company}</p>
 
-          <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200/70 card-hover">
-            <div className="flex items-start gap-4">
-              <div className="bg-purple-100 p-3 rounded-xl">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg">Research &amp; Insights</h3>
-                <p className="text-gray-600 text-sm mt-1">Industry, sector &amp; macroeconomic trend analysis; research notes and investment presentations.</p>
-              </div>
+              {/* Bullets */}
+              <ul className="mt-6 grid gap-3 max-w-3xl">
+                {r.bullets.map((b, k) => (
+                  <li
+                    key={k}
+                    className="flex gap-4 text-cream-400 leading-relaxed"
+                  >
+                    <span className="text-gold-500/70 font-mono text-xs mt-1.5 select-none">
+                      —
+                    </span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          ))}
 
-          <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200/70 card-hover">
-            <div className="flex items-start gap-4">
-              <div className="bg-green-100 p-3 rounded-xl">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg">Portfolio Metrics &amp; Tools</h3>
-                <p className="text-gray-600 text-sm mt-1">P/E, Sharpe Ratio, Information Ratio, Alpha, risk-adjusted returns, benchmarking. Advanced Excel, Bloomberg, Screener.</p>
-              </div>
-            </div>
+          {/* CTA */}
+          <div className="mt-8">
+            <Link
+              href="/experience"
+              className="font-mono text-xs uppercase tracking-widest-xl
+                         text-gold-400 hover:text-gold-300 transition-colors
+                         border-b border-gold-500/30 hover:border-gold-400 pb-1"
+            >
+              View full experience →
+            </Link>
           </div>
         </div>
+
+        {/* Rule */}
+        <div className="mt-12 md:mt-16 gold-rule" />
       </div>
     </section>
   );

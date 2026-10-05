@@ -2,19 +2,42 @@ import Link from "next/link";
 
 export default function ContactCTA() {
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50/40">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="section-title text-3xl font-bold text-gray-800 inline-block">Let&apos;s Connect</h2>
-        <p className="text-gray-600 mt-4 max-w-lg mx-auto">
-          Have a project in mind or want to collaborate? Let&apos;s talk.
-        </p>
-        <div className="mt-8">
-          <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition shadow-sm inline-block"
-          >
-            Get in touch
-          </Link>
+    <section>
+      <div className="container-page">
+        {/* Section header */}
+        <div className="mb-10">
+          <p className="eyebrow">Contact</p>
+          <h2 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.02] tracking-tight text-cream-200 text-balance max-w-3xl">
+            Let&apos;s discuss the{" "}
+            <span className="text-gold-500">next move</span>.
+          </h2>
+        </div>
+
+        {/* Content */}
+        <div className="max-w-2xl">
+          <p className="text-lg text-cream-500 leading-relaxed">
+            Open to conversations around equity research, investment research,
+            financial analysis, and portfolio analytics.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link href="/contact" className="btn-primary">
+              Start a conversation
+            </Link>
+            <a
+              href="mailto:sangameshhalepujari@gmail.com"
+              className="btn-secondary"
+            >
+              sangameshhalepujari@gmail.com
+            </a>
+          </div>
+        </div>
+
+        {/* Trust row */}
+        <div className="mt-10 pt-6 border-t border-cream-500/15 flex flex-wrap gap-x-8 gap-y-3">
+          <span className="meta">CFA Level I (2026)</span>
+          <span className="meta">NISM Research Analyst</span>
+          <span className="meta">3+ Years Experience</span>
         </div>
       </div>
     </section>

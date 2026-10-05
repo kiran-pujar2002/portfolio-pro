@@ -1,48 +1,82 @@
+// src/components/ProjectsPreview.jsx
 import Link from "next/link";
+import Image from "next/image";
+
+const projects = [
+  {
+    title: "Maruti Suzuki — Equity Research & DCF Valuation",
+    description:
+      "Financial model + DCF valuation using FCFF, WACC, terminal value, and sensitivity analysis.",
+    imageUrl:
+      "https://res.cloudinary.com/ty0vjzcd/image/upload/v1791186231/maruthi-suzuki_krfvfm.avif",
+    meta: "Equity Research · 2024",
+  },
+  {
+    title: "Zepto — Financial Modelling & Industry Research",
+    description:
+      "Revenue, cost, and profitability model alongside deep research on Indian quick-commerce.",
+    imageUrl:
+      "https://res.cloudinary.com/ty0vjzcd/image/upload/v1791186241/zepto-image_g54wsk.avif",
+    meta: "Financial Modelling · 2024",
+  },
+];
 
 export default function ProjectsPreview() {
-  const projects = [
-    {
-      title: "Maruti Suzuki India Ltd. – Equity Research & DCF Valuation",
-      description:
-        "Built a financial model covering revenue, cost, and financial statement projections. Performed DCF valuation using FCFF, WACC, terminal value, and sensitivity analysis; assessed key ratios and business drivers.",
-      tech: ["DCF Valuation", "FCFF", "WACC", "Sensitivity Analysis"],
-      slug: "maruti-suzuki-equity-research"
-    },
-    {
-      title: "Zepto – Financial Modelling & Quick-Commerce Industry Research",
-      description:
-        "Developed a financial model covering revenue, cost, and profitability projections. Researched the Indian quick-commerce industry, mapping market growth, competitive landscape, and key operating drivers.",
-      tech: ["Financial Modelling", "Industry Research", "Forecasting", "Excel"],
-      slug: "zepto-financial-modelling"
-    }
-  ];
-
   return (
-    <section className="py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="section-title text-3xl font-bold text-gray-800">Projects</h2>
-          <Link href="/projects" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
-            View all →
-          </Link>
+    <section>
+      <div className="container-page">
+        {/* Section header */}
+        <div className="mb-8">
+          <p className="eyebrow">Selected Work</p>
+          <h2 className="mt-4 section-title max-w-3xl">
+            Research &amp; valuation{" "}
+            <span className="text-gold-500">exhibits</span>.
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
-            <div key={idx} className="bg-white rounded-2xl shadow-sm border border-gray-200/80 overflow-hidden card-hover">
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
-                <p className="text-gray-600 text-sm mt-2">{project.description}</p>
-                <div className="flex flex-wrap gap-1 mt-3">
-                  {project.tech.map((tech, i) => (
-                    <span key={i} className="bg-gray-100 px-2 py-0.5 rounded text-xs">{tech}</span>
-                  ))}
-                </div>
+        {/* Projects — narrower grid */}
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl">
+          {projects.map((p) => (
+            <Link key={p.title} href="/projects" className="group block">
+              {/* Shorter image — 5/3 aspect for a more compact strip */}
+              <div className="relative aspect-[5/3] overflow-hidden">
+                <Image
+                  src={p.imageUrl}
+                  alt={p.title}
+                  fill
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  quality={85}
+                  style={{ filter: "grayscale(0.15)" }}
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-transparent"
+                />
               </div>
-            </div>
+
+              <div className="mt-4">
+                <p className="meta">{p.meta}</p>
+                <h3 className="mt-2 font-serif text-lg md:text-xl text-cream-200 leading-snug group-hover:text-gold-400 transition-colors duration-300">
+                  {p.title}
+                </h3>
+                <p className="mt-2 text-cream-500 leading-relaxed text-sm">
+                  {p.description}
+                </p>
+                <span
+                  className="mt-3 inline-block font-mono text-[10px] uppercase tracking-widest-xl
+                             text-gold-400/80 group-hover:text-gold-300 transition-colors
+                             border-b border-gold-500/30 group-hover:border-gold-400 pb-0.5"
+                >
+                  View project →
+                </span>
+              </div>
+            </Link>
           ))}
         </div>
+
+        {/* Rule */}
+        <div className="mt-10 md:mt-12 gold-rule" />
       </div>
     </section>
   );
